@@ -2,10 +2,9 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 
-app.use(cookieParser())
-
 const app = express();
 
+app.use(cookieParser())
 app.set('view engine', 'ejs');
 
 app.use("/", express.static(__dirname + '/public'));
