@@ -1,0 +1,5 @@
+module.exports = {
+  "mongo": "youriphere",
+  "cookieSecret": "cookiesecret",
+  "cookieKey": "cookiekey"
+};
