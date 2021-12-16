@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const crypto = require('crypto');
+const AutoIncrement = require('mongoose-sequence')(mongoose);
 
 const Schema = mongoose.Schema();
 
@@ -14,11 +15,6 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
-  id: {
-    type: Number,
-    unique: true,
-    required: true
-  },
   rank: {
     type: Number,
     required: true,
@@ -30,6 +26,8 @@ const userSchema = new Schema({
     2 - Admin
     */
 })
+
+UserSchema.plugin(AutoIncrement, {inc_field: 'id'});
 
 userSchema.pre('save', function (next) {
   var user = this;
