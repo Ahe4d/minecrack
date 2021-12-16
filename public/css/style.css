@@ -581,3 +581,7 @@ nav.navbar.navbar-light.bg-faded.navbar-expand-lg {
 .toast {
   opacity: 1;
 }
+
+.navbar-brandimg {
+  height: 30px;
+}
