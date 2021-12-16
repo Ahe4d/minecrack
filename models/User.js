@@ -25,7 +25,7 @@ const userSchema = new mongoose.Schema({
     */
 })
 
-UserSchema.plugin(AutoIncrement, {inc_field: 'id'});
+userSchema.plugin(AutoIncrement, {inc_field: 'id'});
 
 userSchema.pre('save', function (next) {
   var user = this;
