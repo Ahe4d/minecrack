@@ -10,7 +10,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const passport = require('passport');
-const settings = require('./config/settings.json');
+const settings = require('./config/settings');
 
 const app = express();
 
