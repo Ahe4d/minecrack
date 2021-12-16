@@ -3,9 +3,7 @@ const bcrypt = require('bcrypt');
 const crypto = require('crypto');
 const AutoIncrement = require('mongoose-sequence')(mongoose);
 
-const Schema = mongoose.Schema();
-
-const userSchema = new Schema({
+const userSchema = new mongoose.Schema({
   username: {
     type: String,
     unique: true,
